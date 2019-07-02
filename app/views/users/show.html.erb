@@ -21,5 +21,27 @@
         </div>
       <% end %>
     </section>
+
+    <section class="followers">
+      <h1>Followers</h1>
+      <% @followers.each do |follower| %>
+        <div class="follower">
+          <ul>
+            <li class="follower-link"><%= link_to(follower.login, follower.html_url) %></li>
+          </ul>
+        </div>
+      <% end %>
+    </section>
+
+    <section class="followings">
+      <h1>Followings</h1>
+      <% @followings.each do |following| %>
+        <div class="following">
+          <ul>
+            <li class="following-link"><%= link_to(following.login, following.html_url) %></li>
+          </ul>
+        </div>
+      <% end %>
+    </section>
   <% end %>
 </section>

@@ -4,9 +4,17 @@ class UsersController < ApplicationController
   def show
     if current_user.github_token
       user_token = current_user.github_token
-      results = GithubService.new(user_token).repo_info
-      @repos = results[0..4].map do |result|
-        RepoApi.new(result)
+      github_service = GithubService.new(user_token)
+      @repos = github_service.repo_info[0..4].map do |result|
+        Github::RepoApi.new(result)
+      end
+
+      @followers = github_service.follower_info.map do |result|
+        Github::FollowerApi.new(result)
+      end
+
+      @followings = github_service.following_info.map do |result|
+        Github::FollowingApi.new(result)
       end
     end
   end
