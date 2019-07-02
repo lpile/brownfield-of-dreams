@@ -1,3 +1,4 @@
+module Github
 class RepoApi
   attr_reader :name,
               :html_url
@@ -6,4 +7,5 @@ class RepoApi
     @name = attributes[:name]
     @html_url = attributes[:html_url]
   end
+end
 end
