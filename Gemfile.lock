@@ -337,7 +337,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   factory_bot_rails
-  faker
+  faker (~> 1.9.1)
   faraday
   figaro
   foundation-rails
@@ -369,4 +369,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.16.2
+   2.0.2
