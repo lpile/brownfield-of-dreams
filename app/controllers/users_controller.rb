@@ -12,6 +12,10 @@ class UsersController < ApplicationController
       @followers = github_service.follower_info.map do |result|
         Github::FollowerApi.new(result)
       end
+
+      @followings = github_service.following_info.map do |result|
+        Github::FollowingApi.new(result)
+      end
     end
   end
 
