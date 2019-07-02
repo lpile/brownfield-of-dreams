@@ -1,7 +1,15 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  def show; end
+  def show
+    if current_user.github_token
+      user_token = current_user.github_token
+      results = GithubService.new(user_token).repo_info
+      @repos = results[0..4].map do |result|
+        RepoApi.new(result)
+      end
+    end
+  end
 
   def new
     @user = User.new
