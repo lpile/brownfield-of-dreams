@@ -10,10 +10,10 @@
   <section>
     <h1>Bookmarked Segments</h1>
   </section>
-  <% unless @repos.nil? %>
+  <% unless @repositories.nil? %>
     <section class="github">
       <h1>GitHub</h1>
-      <% @repos.each do |repo| %>
+      <% @repositories.each do |repo| %>
         <div class="repo">
           <ul>
             <li class="html_url"><%= link_to(repo.name, repo.html_url) %></li>
