@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/user/following
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - token <GITHUB_TOKEN>
+      User-Agent:
+      - Faraday v0.12.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 03 Jul 2019 05:37:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - GitHub.com
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4940'
+      X-Ratelimit-Reset:
+      - '1562134715'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"ce186b61dd42cb111b14735e6fb510d0"
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - E833:2358:1051C:17713:5D1C3F27
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"login":"sbrunswig","id":955212,"node_id":"MDQ6VXNlcjk1NTIxMg==","avatar_url":"https://avatars2.githubusercontent.com/u/955212?v=4","gravatar_id":"","url":"https://api.github.com/users/sbrunswig","html_url":"https://github.com/sbrunswig","followers_url":"https://api.github.com/users/sbrunswig/followers","following_url":"https://api.github.com/users/sbrunswig/following{/other_user}","gists_url":"https://api.github.com/users/sbrunswig/gists{/gist_id}","starred_url":"https://api.github.com/users/sbrunswig/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/sbrunswig/subscriptions","organizations_url":"https://api.github.com/users/sbrunswig/orgs","repos_url":"https://api.github.com/users/sbrunswig/repos","events_url":"https://api.github.com/users/sbrunswig/events{/privacy}","received_events_url":"https://api.github.com/users/sbrunswig/received_events","type":"User","site_admin":false},{"login":"andybeckmann","id":2136720,"node_id":"MDQ6VXNlcjIxMzY3MjA=","avatar_url":"https://avatars3.githubusercontent.com/u/2136720?v=4","gravatar_id":"","url":"https://api.github.com/users/andybeckmann","html_url":"https://github.com/andybeckmann","followers_url":"https://api.github.com/users/andybeckmann/followers","following_url":"https://api.github.com/users/andybeckmann/following{/other_user}","gists_url":"https://api.github.com/users/andybeckmann/gists{/gist_id}","starred_url":"https://api.github.com/users/andybeckmann/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/andybeckmann/subscriptions","organizations_url":"https://api.github.com/users/andybeckmann/orgs","repos_url":"https://api.github.com/users/andybeckmann/repos","events_url":"https://api.github.com/users/andybeckmann/events{/privacy}","received_events_url":"https://api.github.com/users/andybeckmann/received_events","type":"User","site_admin":false}]'
+    http_version: 
+  recorded_at: Wed, 03 Jul 2019 05:37:41 GMT
+recorded_with: VCR 4.0.0
