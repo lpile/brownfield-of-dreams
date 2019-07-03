@@ -1,11 +1,13 @@
-module Github
-class FollowerApi
-  attr_reader :login,
-              :html_url
+# frozen_string_literal: true
 
-  def initialize(attributes = {})
-    @login = attributes[:login]
-    @html_url = attributes[:html_url]
+module Github
+  class FollowerApi
+    attr_reader :login,
+                :html_url
+
+    def initialize(attributes = {})
+      @login = attributes[:login]
+      @html_url = attributes[:html_url]
+    end
   end
-end
 end
