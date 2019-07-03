@@ -1,5 +1,5 @@
-# frozen_string_literal: true	
+# frozen_string_literal: true
 
-class VideoSerializer < ActiveModel::Serializer	
-  attributes :id, :title, :description, :position	
+class VideoSerializer < ActiveModel::Serializer
+  attributes :id, :title, :description, :position
 end
