@@ -7,41 +7,44 @@
     <li> <%= current_user.first_name  %> <%= current_user.last_name %> </li>
     <li> <%= current_user.email%> </li>
   </ul>
-  <section>
+
+  <section class="bookmark">
     <h1>Bookmarked Segments</h1>
   </section>
-  <% unless @repositories.nil? %>
+
+  <% unless current_user.github_token.nil? %>
     <section class="github">
       <h1>GitHub</h1>
-      <% @repositories.each do |repo| %>
-        <div class="repo">
-          <ul>
-            <li class="html_url"><%= link_to(repo.name, repo.html_url) %></li>
-          </ul>
-        </div>
-      <% end %>
-    </section>
 
-    <section class="followers">
-      <h1>Followers</h1>
-      <% @followers.each do |follower| %>
-        <div class="follower">
+      <div class="repository-list">
+        <% @repositories.each do |repo| %>
           <ul>
-            <li class="follower-link"><%= link_to(follower.login, follower.html_url) %></li>
+            <li class="repository-list-link"><%= link_to(repo.name, repo.html_url) %></li>
           </ul>
-        </div>
-      <% end %>
-    </section>
+        <% end %>
+      </div>
 
-    <section class="followings">
-      <h1>Followings</h1>
-      <% @followings.each do |following| %>
-        <div class="following">
+      <section class="follower">
+        <h1>Followers</h1>
+        <div class="follower-list">
+          <% @followers.each do |follower| %>
           <ul>
-            <li class="following-link"><%= link_to(following.login, following.html_url) %></li>
+            <li class="follower-list-link"><%= link_to(follower.login, follower.html_url) %></li>
           </ul>
+          <% end %>
         </div>
-      <% end %>
-    </section>
-  <% end %>
-</section>
+      </section>
+
+      <section class="following">
+        <h1>Following</h1>
+        <div class="following-list">
+          <% @followings.each do |following| %>
+          <ul>
+            <li class="following-list-link"><%= link_to(following.login, following.html_url) %></li>
+          </ul>
+          <% end %>
+        </div>
+      </section> 
+    </section> 
+  <% end %> 
+</section> 
