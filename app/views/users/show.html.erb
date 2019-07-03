@@ -17,7 +17,7 @@
       <h1>GitHub</h1>
 
       <div class="repository-list">
-        <% @repositories.each do |repo| %>
+        <% facade.repositories.each do |repo| %>
           <ul>
             <li class="repository-list-link"><%= link_to(repo.name, repo.html_url) %></li>
           </ul>
@@ -27,7 +27,7 @@
       <section class="follower">
         <h1>Followers</h1>
         <div class="follower-list">
-          <% @followers.each do |follower| %>
+          <% facade.followers.each do |follower| %>
           <ul>
             <li class="follower-list-link"><%= link_to(follower.login, follower.html_url) %></li>
           </ul>
@@ -38,7 +38,7 @@
       <section class="following">
         <h1>Following</h1>
         <div class="following-list">
-          <% @followings.each do |following| %>
+          <% facade.followings.each do |following| %>
           <ul>
             <li class="following-list-link"><%= link_to(following.login, following.html_url) %></li>
           </ul>
