@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 module Github
-  class FollowingApi
-    attr_reader :login,
+  class RepositoryApi
+    attr_reader :name,
                 :html_url
 
     def initialize(attributes = {})
-      @login = attributes[:login]
+      @name = attributes[:name]
       @html_url = attributes[:html_url]
     end
   end

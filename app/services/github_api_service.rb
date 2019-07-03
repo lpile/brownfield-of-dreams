@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-class GithubService
+class GithubApiService
   def initialize(token)
     @token = token
   end
 
-  def repo_info
+  def repository_info
     get_json('/user/repos')
   end
 
