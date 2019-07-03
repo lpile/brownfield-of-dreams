@@ -12,7 +12,7 @@ describe GithubApiService do
 
   context '#repositories_info' do
     it 'returns repository data for user' do
-      VCR.use_cassette('github_repository_data') do
+      VCR.use_cassette('services/github_repository_data') do
         repository_data = github_api_service.repository_info
         repository = repository_data.first
 
@@ -26,7 +26,7 @@ describe GithubApiService do
 
   context '#follower_info' do
     it 'returns follower data for user' do
-      VCR.use_cassette('github_followers') do
+      VCR.use_cassette('services/github_follower_data') do
         follower_data = github_api_service.follower_info
         follower = follower_data.first
 
@@ -40,7 +40,7 @@ describe GithubApiService do
 
   context '#following_info' do
     it 'returns following data for user' do
-      VCR.use_cassette('github_followings') do
+      VCR.use_cassette('services/github_following_data') do
         following_data = github_api_service.following_info
         following = following_data.first
 
