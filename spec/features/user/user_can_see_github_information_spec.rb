@@ -14,7 +14,7 @@ feature 'User can see github information in github section' do
 
       expect(current_path).to eq(dashboard_path)
       expect(page).to have_css('.github')
-      expect(page).to have_content("GitHub")
+      expect(page).to have_content('GitHub')
 
       within('.repository-list') do
         expect(page).to have_css('.repository-list-link')
@@ -32,7 +32,7 @@ feature 'User can see github information in github section' do
 
       within('.github') do
         expect(page).to have_css('.follower')
-        expect(page).to have_content("Followers")
+        expect(page).to have_content('Followers')
       end
 
       within('.follower-list') do
@@ -50,7 +50,7 @@ feature 'User can see github information in github section' do
 
       within('.github') do
         expect(page).to have_css('.following')
-        expect(page).to have_content("Following")
+        expect(page).to have_content('Following')
       end
 
       within('.following-list') do
