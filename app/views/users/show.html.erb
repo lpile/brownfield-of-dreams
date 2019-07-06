@@ -10,6 +10,13 @@
 
   <section class="bookmark">
     <h1>Bookmarked Segments</h1>
+    <% unless facade.bookmarked_videos.nil? %>
+      <ul>
+        <% facade.bookmarked_videos.each do |video| %>
+          <li> <%= link_to(video.title, tutorial_path(video.id)) %> - <%= video.tutorial.title %> </li>
+        <% end %>
+      </ul>
+    <% end %>
   </section>
 
   <%= link_to "Connect to GitHub", "/auth/github" %>
