@@ -12,6 +12,8 @@
     <h1>Bookmarked Segments</h1>
   </section>
 
+  <%= link_to "Connect to GitHub", "/auth/github" %>
+
   <% unless current_user.github_token.nil? %>
     <section class="github">
       <h1>GitHub</h1>
@@ -44,7 +46,7 @@
           </ul>
           <% end %>
         </div>
-      </section> 
-    </section> 
-  <% end %> 
-</section> 
+      </section>
+    </section>
+  <% end %>
+</section>
