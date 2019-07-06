@@ -1,6 +1,9 @@
 class DashboardShowFacade
+  attr_reader :bookmarked_videos
+
   def initialize(current_user)
     @github_token = current_user.github_token
+    @bookmarked_videos = current_user.bookmarked_videos
   end
 
   def repositories
