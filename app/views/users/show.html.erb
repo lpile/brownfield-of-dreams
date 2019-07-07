@@ -19,7 +19,9 @@
     <% end %>
   </section>
 
-  <%= link_to "Connect to GitHub", "/auth/github" %>
+  <% unless current_user.github_token %>
+    <%= link_to "Connect to GitHub", "/auth/github" %>
+  <% end %>
 
   <% unless current_user.github_token.nil? %>
     <section class="github">
