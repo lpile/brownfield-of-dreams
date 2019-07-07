@@ -24,17 +24,25 @@
   <% unless current_user.github_token.nil? %>
     <section class="github">
       <h1>GitHub</h1>
-
-      <div class="repository-list">
-        <% facade.repositories.each do |repo| %>
-          <ul>
-            <li class="repository-list-link"><%= link_to(repo.name, repo.html_url) %></li>
-          </ul>
+      <section class="repository">
+        <h3>Repositories</h3>
+        <% if facade.repositories.empty? %>
+          <p>You currently have no repositories.</p>
         <% end %>
-      </div>
+        <div class="repository-list">
+          <% facade.repositories.each do |repo| %>
+            <ul>
+              <li class="repository-list-link"><%= link_to(repo.name, repo.html_url) %></li>
+            </ul>
+          <% end %>
+        </div>
+      </section>
 
       <section class="follower">
-        <h1>Followers</h1>
+        <h3>Followers</h3>
+        <% if facade.followers.empty? %>
+          <p>You're not following anyone.</p>
+        <% end %>
         <div class="follower-list">
           <% facade.followers.each do |follower| %>
           <ul>
@@ -45,7 +53,10 @@
       </section>
 
       <section class="following">
-        <h1>Following</h1>
+        <h3>Following</h3>
+        <% if facade.followings.empty? %>
+          <p>No one is following you.</p>
+        <% end %>
         <div class="following-list">
           <% facade.followings.each do |following| %>
           <ul>
