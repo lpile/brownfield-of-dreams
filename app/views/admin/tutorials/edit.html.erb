@@ -1,5 +1,21 @@
 <h1><%= @tutorial.title %></h1>
+
 <section class="col col-4 p3 border">
+  
+  <div class="btn btn-outline">
+    <% if @tutorial.classroom_content? %>
+      <%= form_for @tutorial do |f| %>
+        <%= f.hidden_field :classroom, value: false %>
+        <%= f.submit 'Visitor Content'%>
+      <% end %>
+    <% else %>
+      <%= form_for @tutorial do |f| %>
+        <%= f.hidden_field :classroom, value: true %>
+        <%= f.submit 'Classroom Content' %>
+      <% end %>
+    <% end %>
+  </div>
+
   <h4>Videos (<%= @tutorial.videos.count %>)</h4>
   <p>Drag and drop to sort. Don't forget to save.</p>
   <div data-controller="tutorials">
