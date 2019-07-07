@@ -18,7 +18,7 @@ feature 'User can see github information in github section' do
 
       within('.repository-list') do
         expect(page).to have_css('.repository-list-link')
-        expect(page).to have_link('NYT-Api-Activity', href: 'https://github.com/bexway/NYT-Api-Activity')
+        expect(page).to have_link('BookClub', href: 'https://github.com/CosmicSpagetti/BookClub')
         expect(page).to have_selector('.repository-list-link', count: 5)
       end
     end
@@ -37,7 +37,7 @@ feature 'User can see github information in github section' do
 
       within('.follower-list') do
         expect(page).to have_css('.follower-list-link')
-        expect(page).to have_link('frankstepanski', href: 'https://github.com/frankstepanski')
+        expect(page).to have_link('kylecornelissen', href: 'https://github.com/kylecornelissen')
       end
     end
   end
@@ -55,7 +55,7 @@ feature 'User can see github information in github section' do
 
       within('.following-list') do
         expect(page).to have_css('.following-list-link')
-        expect(page).to have_link('sbrunswig', href: 'https://github.com/sbrunswig')
+        expect(page).to have_link('kylecornelissen', href: 'https://github.com/kylecornelissen')
       end
     end
   end
