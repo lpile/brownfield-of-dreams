@@ -46,4 +46,6 @@ Rails.application.routes.draw do
   resources :user_videos, only: %i[create destroy]
 
   get '/auth/github/callback', to: 'github#new'
+
+  get '/:token/confirm_email/', :to => "users#confirm_email", as: 'confirm_email'
 end
