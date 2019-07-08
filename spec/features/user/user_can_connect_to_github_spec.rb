@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 feature 'User connecting to Github' do
@@ -10,16 +12,16 @@ feature 'User connecting to Github' do
 
       visit dashboard_path
 
-      expect(page).to have_link("Connect to GitHub")
+      expect(page).to have_link('Connect to GitHub')
 
       OmniAuth.config.test_mode = true
 
-      OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
+      OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(
         :provider => 'github',
-        "credentials" => {"token" => '123545'}
-      })
+        'credentials' => { 'token' => '123545' }
+      )
 
-      click_on "Connect to GitHub"
+      click_on 'Connect to GitHub'
 
       expect(user2.github_token).to eq('123545')
     end
@@ -31,7 +33,7 @@ feature 'User connecting to Github' do
 
       visit dashboard_path
 
-      expect(page).to have_no_link("Connect to GitHub")
+      expect(page).to have_no_link('Connect to GitHub')
     end
   end
 end

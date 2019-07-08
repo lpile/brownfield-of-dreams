@@ -39,7 +39,7 @@ RSpec.describe User, type: :model do
       create(:user_video, user_id: user.id, video_id: v3.id)
 
       results = user.bookmarked_videos
-      
+
       expect(results.count).to eq(2)
       expect(results[0]).to eq(v1)
       expect(results[1]).to eq(v3)

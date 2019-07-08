@@ -8,6 +8,6 @@ class Tutorial < ApplicationRecord
   scope :visitor_content, -> { where(classroom: false) }
 
   def classroom_content?
-    self.classroom == true
+    classroom == true
   end
 end

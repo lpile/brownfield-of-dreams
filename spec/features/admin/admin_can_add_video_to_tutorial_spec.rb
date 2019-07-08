@@ -19,7 +19,7 @@ feature 'An Admin can add new video to blank tutorial' do
       click_on 'Save'
 
       tutorial = Tutorial.last
-      
+
       click_on 'Add Video'
 
       fill_in 'video[title]', with: 'How to tie your shoes.'

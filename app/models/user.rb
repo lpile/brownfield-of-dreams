@@ -10,12 +10,12 @@ class User < ApplicationRecord
   enum role: %i[default admin]
   has_secure_password
 
-  def bookmarked_videos 
+  def bookmarked_videos
     videos.joins(:tutorial).order(:id, Tutorial.arel_table[:title])
   end
 
   def set_confirmation_token
-    if self.confirm_token.blank?
+    if confirm_token.blank?
       self.confirm_token = SecureRandom.urlsafe_base64.to_s
     end
   end

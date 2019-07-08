@@ -16,7 +16,7 @@ feature 'User can see github information in github section' do
       expect(page).to have_content('GitHub')
 
       within('.repository') do
-        expect(page).to have_content("You currently have no repositories.")
+        expect(page).to have_content('You currently have no repositories.')
       end
 
       within('.repository-list') do
@@ -56,7 +56,7 @@ feature 'User can see github information in github section' do
       expect(page).to have_content('GitHub')
 
       within('.following') do
-        expect(page).to have_content("No one is following you.")
+        expect(page).to have_content('No one is following you.')
       end
 
       within('.following-list') do

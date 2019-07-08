@@ -24,6 +24,12 @@
   <% end %>
 
   <% unless current_user.github_token.nil? %>
+
+    <%= form_tag '/invite' do %>
+      Your Friend's Github handle: <%= text_field_tag :github_handle %>
+      <%= submit_tag "Invite Them" %>
+    <% end %>
+
     <section class="github">
       <h1>GitHub</h1>
       <section class="repository">

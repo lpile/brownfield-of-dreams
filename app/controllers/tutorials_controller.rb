@@ -12,7 +12,7 @@ class TutorialsController < ApplicationController
 
   def update
     tutorial = Tutorial.find(params[:id])
-    tutorial.update(classroom: params["tutorial"]["classroom"])
+    tutorial.update(classroom: params['tutorial']['classroom'])
 
     redirect_to edit_admin_tutorial_path(tutorial)
   end

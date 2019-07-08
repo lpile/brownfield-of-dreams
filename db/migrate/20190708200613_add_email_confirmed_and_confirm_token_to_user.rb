@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddEmailConfirmedAndConfirmTokenToUser < ActiveRecord::Migration[5.2]
   def change
     add_column :users, :email_confirmed, :boolean, default: false
