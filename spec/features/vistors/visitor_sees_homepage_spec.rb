@@ -24,6 +24,32 @@ describe 'Visitor' do
         expect(page).to have_content(@tutorial1.description)
       end
     end
+
+    it 'can see a list of tagged tutorials but not classroom content tutorials' do
+      mod_3_tutorial_data = {
+        'title' => 'Back End Engineering - Module 3',
+        'description' => 'Video content for Mod 3.',
+        'thumbnail' => 'https://i.ytimg.com/vi/R5FPYQgB6Zc/hqdefault.jpg',
+        'playlist_id' => 'PL1Y67f0xPzdOq2FcpWnawJeyJ3ELUdBkJ',
+        'classroom' => true,
+        'tag_list' => ['Ruby']
+      }
+      m3_tutorial = Tutorial.create! mod_3_tutorial_data
+      
+      visit root_path()
+
+      within('.categories') do
+        expect(page).to have_content('Ruby')
+      end
+  
+      within('.categories') do
+        click_on 'Ruby'
+      end
+  
+      expect(current_path).to eq('/tags/Ruby')
+      expect(page).to have_content(mod_3_tutorial_data[:title])
+      expect(page).to have_no_content(@tutorial1.title)
+    end
   end
 
   context 'edge cases' do
