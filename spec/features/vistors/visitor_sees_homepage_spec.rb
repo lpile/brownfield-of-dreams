@@ -35,17 +35,17 @@ describe 'Visitor' do
         'tag_list' => ['Ruby']
       }
       m3_tutorial = Tutorial.create! mod_3_tutorial_data
-      
-      visit root_path()
+
+      visit root_path
 
       within('.categories') do
         expect(page).to have_content('Ruby')
       end
-  
+
       within('.categories') do
         click_on 'Ruby'
       end
-  
+
       expect(current_path).to eq('/tags/Ruby')
       expect(page).to have_content(mod_3_tutorial_data[:title])
       expect(page).to have_no_content(@tutorial1.title)
