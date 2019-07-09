@@ -18,7 +18,8 @@ class UsersController < ApplicationController
       user.set_confirmation_token
       user.save(validate: false)
       UserMailer.registration_confirmation(user).deliver_now
-      flash[:success] = 'Please confirm your email address to continue'
+      flash[:success] = ["Logged in as #{user.first_name}"]
+      flash[:success] << "This account has not yet been activated. Please check your email."
       redirect_to dashboard_path
     else
       flash[:error] = 'Username already exists'
@@ -31,6 +32,7 @@ class UsersController < ApplicationController
     if user
       user.validate_email
       user.save(validate: false)
+      flash[:success] = "Thank you! Your account is now activated."
       redirect_to dashboard_path
     else
       flash[:error] = 'Sorry. User does not exist'
