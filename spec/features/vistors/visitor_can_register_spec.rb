@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 describe 'vister can create an account', :js do
-  it ' visits the home page' do
+  it 'creates sucessful account' do
     email = 'jimbob@aol.com'
     first_name = 'Jim'
     last_name = 'Bob'
@@ -44,5 +44,30 @@ describe 'vister can create an account', :js do
     expect(current_path).to eq(dashboard_path)
     expect(page).to have_content("Status: Active")
     expect(page).to have_content("Thank you! Your account is now activated.")
+  end
+
+  it 'displays error message if email already exists' do
+    user = create(:user)
+
+    visit '/'
+
+    click_on 'Sign In'
+
+    expect(current_path).to eq(login_path)
+
+    click_on 'Sign up now.'
+
+    expect(current_path).to eq(new_user_path)
+
+    fill_in 'user[email]', with: user.email
+    fill_in 'user[first_name]', with: user.first_name
+    fill_in 'user[last_name]', with: user.last_name
+    fill_in 'user[password]', with: user.password
+    fill_in 'user[password_confirmation]', with: user.password
+
+    click_on'Create Account'
+
+    expect(current_path).to eq(new_user_path)
+    expect(page).to have_content('Username already exists')
   end
 end
