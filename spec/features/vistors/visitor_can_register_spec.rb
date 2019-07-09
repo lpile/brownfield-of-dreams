@@ -46,6 +46,35 @@ describe 'vister can create an account', :js do
     expect(page).to have_content("Thank you! Your account is now activated.")
   end
 
+  it 'creates sucessful account' do
+    email = 'jimbob@aol.com'
+    first_name = 'Jim'
+    last_name = 'Bob'
+    password = 'password'
+    password_confirmation = 'password'
+
+    visit '/'
+
+    click_on 'Sign In'
+
+    click_on 'Sign up now.'
+
+    fill_in 'user[email]', with: email
+    fill_in 'user[first_name]', with: first_name
+    fill_in 'user[last_name]', with: last_name
+    fill_in 'user[password]', with: password
+    fill_in 'user[password_confirmation]', with: password
+
+    click_on'Create Account'
+
+    user = User.last
+
+    visit "/khjkjgkjgkjgkj/confirm_email"
+
+    expect(current_path).to eq(root_path)
+    expect(page).to have_content('Sorry. User does not exist')
+  end
+
   it 'displays error message if email already exists' do
     user = create(:user)
 
