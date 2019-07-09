@@ -6,6 +6,11 @@
   <ul>
     <li> <%= current_user.first_name  %> <%= current_user.last_name %> </li>
     <li> <%= current_user.email%> </li>
+    <% if current_user.email_confirmed %>
+      <li>Status: Active</li>
+    <% else %>
+      <li>Status: Inactive</li>
+    <% end %>
   </ul>
 
   <section class="bookmark">
@@ -24,6 +29,14 @@
   <% end %>
 
   <% unless current_user.github_token.nil? %>
+
+    <div class='invite'>
+      <%= form_tag '/invite' do %>
+        Enter Your Friend's Github handle: <%= text_field_tag :github_handle %>
+        <%= submit_tag "Invite Them" %>
+      <% end %>
+    </div>
+
     <section class="github">
       <h1>GitHub</h1>
       <section class="repository">

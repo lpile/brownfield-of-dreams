@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DashboardShowFacade
   attr_reader :bookmarked_videos
 
@@ -25,6 +27,7 @@ class DashboardShowFacade
   end
 
   private
+
   attr_reader :github_token
 
   def github_api_service

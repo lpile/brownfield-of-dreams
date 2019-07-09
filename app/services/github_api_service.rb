@@ -17,6 +17,10 @@ class GithubApiService
     get_json('/user/following')
   end
 
+  def invitee_email(github_handle)
+    get_json("users/#{github_handle}")
+  end
+
   private
 
   def get_json(url)

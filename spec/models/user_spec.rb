@@ -39,10 +39,32 @@ RSpec.describe User, type: :model do
       create(:user_video, user_id: user.id, video_id: v3.id)
 
       results = user.bookmarked_videos
-      
+
       expect(results.count).to eq(2)
       expect(results[0]).to eq(v1)
       expect(results[1]).to eq(v3)
+    end
+
+    it 'set_confirmation_token' do
+      user = create(:user)
+
+      expect(user.confirm_token).to eq(nil)
+
+      user.set_confirmation_token
+
+      expect(user.confirm_token.class).to eq(String)
+    end
+
+    it 'validate_email' do
+      user = create(:user, confirm_token: '322lkj43kj34')
+
+      expect(user.email_confirmed).to eq(false)
+      expect(user.confirm_token).to eq('322lkj43kj34')
+
+      user.validate_email
+
+      expect(user.email_confirmed).to eq(true)
+      expect(user.confirm_token).to eq(nil)
     end
   end
 end

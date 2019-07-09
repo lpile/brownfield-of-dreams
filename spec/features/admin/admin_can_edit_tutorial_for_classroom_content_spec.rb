@@ -12,7 +12,7 @@ feature 'An Admin can edit a tutorial' do
 
       visit admin_dashboard_path
 
-      within(first(".admin-tutorial-card")) do
+      within(first('.admin-tutorial-card')) do
         click_on 'Edit'
       end
 
