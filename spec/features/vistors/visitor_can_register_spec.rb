@@ -32,8 +32,8 @@ describe 'vister can create an account', :js do
 
     expect(current_path).to eq(dashboard_path)
     expect(page).to have_content("Logged in as #{user.first_name}")
-    expect(page).to have_content("This account has not yet been activated. Please check your email.")
-    expect(page).to have_content("Status: Inactive")
+    expect(page).to have_content('This account has not yet been activated. Please check your email.')
+    expect(page).to have_content('Status: Inactive')
     expect(page).to have_content(email)
     expect(page).to have_content(first_name)
     expect(page).to have_content(last_name)
@@ -42,8 +42,8 @@ describe 'vister can create an account', :js do
     visit "/#{user.confirm_token}/confirm_email"
 
     expect(current_path).to eq(dashboard_path)
-    expect(page).to have_content("Status: Active")
-    expect(page).to have_content("Thank you! Your account is now activated.")
+    expect(page).to have_content('Status: Active')
+    expect(page).to have_content('Thank you! Your account is now activated.')
   end
 
   it 'creates sucessful account' do
@@ -69,7 +69,7 @@ describe 'vister can create an account', :js do
 
     user = User.last
 
-    visit "/khjkjgkjgkjgkj/confirm_email"
+    visit '/khjkjgkjgkjgkj/confirm_email'
 
     expect(current_path).to eq(root_path)
     expect(page).to have_content('Sorry. User does not exist')

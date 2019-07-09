@@ -56,10 +56,10 @@ RSpec.describe User, type: :model do
     end
 
     it 'validate_email' do
-      user = create(:user, confirm_token: "322lkj43kj34")
+      user = create(:user, confirm_token: '322lkj43kj34')
 
       expect(user.email_confirmed).to eq(false)
-      expect(user.confirm_token).to eq("322lkj43kj34")
+      expect(user.confirm_token).to eq('322lkj43kj34')
 
       user.validate_email
 

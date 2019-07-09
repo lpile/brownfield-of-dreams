@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe UserMailer, type: :mailer do
   describe 'registration_confirmation' do
-    let(:user) { create(:user, github_token: ENV['TEST_GITHUB_TOKEN'], confirm_token: "232425lkjkjh2khj3") }
+    let(:user) { create(:user, github_token: ENV['TEST_GITHUB_TOKEN'], confirm_token: '232425lkjkjh2khj3') }
     let(:mail) { UserMailer.registration_confirmation(user) }
 
     it 'renders the subject' do
@@ -16,7 +16,7 @@ RSpec.describe UserMailer, type: :mailer do
     end
 
     it 'renders the sender email' do
-      expect(mail.from).to eq(["register@brownfield-turing.com"])
+      expect(mail.from).to eq(['register@brownfield-turing.com'])
     end
 
     it 'assigns @name' do
