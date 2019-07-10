@@ -3,7 +3,7 @@
 # SessionsController to Login/Logout
 class SessionsController < ApplicationController
   def new
-    @user ||= User.new
+    @new ||= User.new
   end
 
   def create

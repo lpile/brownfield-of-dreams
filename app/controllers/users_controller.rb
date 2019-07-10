@@ -18,40 +18,11 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       user.set_confirmation_token
       user.save(validate: false)
-      UserMailer.registration_confirmation(user).deliver_now
-      flash[:success] = ["Logged in as #{user.first_name}"]
-      flash[:success] << activate_message
-      redirect_to dashboard_path
+      send_confirmation_email
     else
       flash[:error] = 'Username already exists'
       redirect_to new_user_path
     end
-  end
-
-  def confirm_email
-    user = User.find_by_confirm_token(params[:token])
-    if user
-      user.validate_email
-      user.save(validate: false)
-      flash[:success] = 'Thank you! Your account is now activated.'
-      redirect_to dashboard_path
-    else
-      flash[:error] = 'Sorry. User does not exist'
-      redirect_to root_url
-  end
-  end
-
-  def invite_email
-    github_handle = params[:github_handle]
-    service = GithubApiService.new(current_user.github_token)
-    invitee = service.invitee_email(github_handle)
-    if invitee[:email]
-      UserMailer.invite_by_email(current_user, invitee).deliver_now
-      flash[:success] = 'Successfully sent invite!'
-    else
-      flash[:error] = invalid_email_message1 + invalid_email_message2
-    end
-    redirect_to dashboard_path
   end
 
   private
@@ -60,15 +31,18 @@ class UsersController < ApplicationController
     params.require(:user).permit(:email, :first_name, :last_name, :password)
   end
 
+  def send_confirmation_email
+    UserMailer.registration_confirmation(current_user).deliver_now
+    create_message
+    redirect_to dashboard_path
+  end
+
   def activate_message
     'This account has not yet been activated. Please check your email.'
   end
 
-  def invalid_email_message1
-    "The Github user you selected doesn't have "
-  end
-
-  def invalid_email_message2
-    'an email address associated with their account.'
+  def create_message
+    flash[:success] = ["Logged in as #{current_user.first_name}"]
+    flash[:success] << activate_message
   end
 end

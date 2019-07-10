@@ -47,6 +47,6 @@ Rails.application.routes.draw do
 
   get '/auth/github/callback', to: 'github#new'
 
-  get '/:token/confirm_email/', to: 'users#confirm_email', as: 'confirm_email'
-  post '/invite', to: 'users#invite_email'
+  get '/:token/confirm_email/', to: 'users/confirm#create', as: 'confirm_email'
+  post '/invite', to: 'users/invite#create'
 end

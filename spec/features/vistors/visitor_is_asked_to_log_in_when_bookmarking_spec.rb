@@ -9,7 +9,7 @@ describe 'visitor visits video show page' do
 
     visit tutorial_path(tutorial)
 
-    expect(page).to have_content("#{video.title}")
+    expect(page).to have_content(video.title.to_s)
 
     click_on 'Bookmark'
 
