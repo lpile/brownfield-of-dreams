@@ -7,7 +7,12 @@ namespace :video do
     count_nil_videos = nil_videos.count
     if count_nil_videos.positive?
       nil_videos.each do |video|
-        tutorials_last_position = Video.where(tutorial_id: video.tutorial_id).where.not(position: nil).order(position: :DESC).limit(1).pluck(:position)[0]
+        tutorials_last_position = Video.where(tutorial_id: video.tutorial_id)
+                                       .where.not(position: nil)
+                                       .order(position: :DESC)
+                                       .limit(1)
+                                       .pluck(:position)[0]
+
         if tutorials_last_position.positive?
           video.update(position: (tutorials_last_position + 1))
         else

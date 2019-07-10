@@ -25,7 +25,7 @@ describe 'Visitor' do
       end
     end
 
-    it 'can see a list of tagged tutorials but not classroom content tutorials' do
+    it 'can see a list of tagged visitor content tutorials' do
       mod_3_tutorial_data = {
         'title' => 'Back End Engineering - Module 3',
         'description' => 'Video content for Mod 3.',

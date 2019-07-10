@@ -4,11 +4,16 @@ require 'rails_helper'
 
 RSpec.describe UserMailer, type: :mailer do
   describe 'registration_confirmation' do
-    let(:user) { create(:user, github_token: ENV['TEST_GITHUB_TOKEN'], confirm_token: '232425lkjkjh2khj3') }
+    let(:user) do
+      create(:user,
+             github_token: ENV['TEST_GITHUB_TOKEN'],
+             confirm_token: '232425lkjkjh2khj3')
+    end
+
     let(:mail) { UserMailer.registration_confirmation(user) }
 
     it 'renders the subject' do
-      expect(mail.subject).to eql("#{user.first_name} please, confirm your account.")
+      expect(mail.subject).to eql('Brownfield Account Activation')
     end
 
     it 'renders the receiver email' do

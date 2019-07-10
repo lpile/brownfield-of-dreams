@@ -21,7 +21,9 @@ module Admin
 
     def update
       tutorial = Tutorial.find(params[:id])
-      flash[:success] = "#{tutorial.title} tagged!" if tutorial.update(tutorial_params)
+      if tutorial.update(tutorial_params)
+        flash[:success] = "#{tutorial.title} tagged!"
+      end
       redirect_to edit_admin_tutorial_path(tutorial)
     end
 

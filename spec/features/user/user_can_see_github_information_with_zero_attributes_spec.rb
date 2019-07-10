@@ -3,11 +3,12 @@
 require 'rails_helper'
 
 feature 'User can see github information in github section' do
-  let(:user) { create(:user, github_token: ENV['TEST_GITHUB_TOKEN']) }
+  let(:user) { create(:user, github_token: ENV['TEST_TOKEN']) }
 
   scenario 'where user has zero repositories' do
-    VCR.use_cassette('user/user_has_zero_repositories') do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    VCR.use_cassette('user/has_zero_repositories') do
+      allow_any_instance_of(ApplicationController).to \
+        receive(:current_user).and_return(user)
 
       visit dashboard_path
 
@@ -26,8 +27,9 @@ feature 'User can see github information in github section' do
   end
 
   scenario 'where user has zero followers' do
-    VCR.use_cassette('user/user_has_zero_followers') do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    VCR.use_cassette('user/has_zero_followers') do
+      allow_any_instance_of(ApplicationController).to \
+        receive(:current_user).and_return(user)
 
       visit dashboard_path
 
@@ -46,8 +48,9 @@ feature 'User can see github information in github section' do
   end
 
   scenario 'where user has zero following' do
-    VCR.use_cassette('user/user_has_zero_following') do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    VCR.use_cassette('user/has_zero_following') do
+      allow_any_instance_of(ApplicationController).to \
+        receive(:current_user).and_return(user)
 
       visit dashboard_path
 

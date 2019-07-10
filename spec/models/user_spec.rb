@@ -3,6 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  let(:user) { create(:user) }
+  let(:admin) { create(:admin) }
+
   describe 'validations' do
     it { should validate_presence_of(:email) }
     it { should validate_presence_of(:first_name) }
@@ -11,15 +14,11 @@ RSpec.describe User, type: :model do
 
   describe 'roles' do
     it 'can be created as default user' do
-      user = User.create(email: 'user@email.com', password: 'password', first_name: 'Jim', role: 0)
-
       expect(user.role).to eq('default')
       expect(user.default?).to be_truthy
     end
 
     it 'can be created as an Admin user' do
-      admin = User.create(email: 'admin@email.com', password: 'admin', first_name: 'Bob', role: 1)
-
       expect(admin.role).to eq('admin')
       expect(admin.admin?).to be_truthy
     end
@@ -27,12 +26,10 @@ RSpec.describe User, type: :model do
 
   describe 'instance methods' do
     it 'bookmarked_videos' do
-      t1 = create(:tutorial, title: 'How to Tie Your Shoes vol1')
-      v1 = create(:video, title: 'The Bunny Ears Technique vol1', tutorial: t1)
-      t2 = create(:tutorial, title: 'How to Tie Your Shoes vol2')
-      v2 = create(:video, title: 'The Bunny Ears Technique vol2', tutorial: t2)
-      t3 = create(:tutorial, title: 'How to Tie Your Shoes vol3')
-      v3 = create(:video, title: 'The Bunny Ears Technique vol3', tutorial: t3)
+      t1, t2, t3 = create_list(:tutorial, 3)
+      v1 = create(:video, tutorial: t1)
+      v2 = create(:video, tutorial: t2)
+      v3 = create(:video, tutorial: t3)
       user = create(:user)
 
       create(:user_video, user_id: user.id, video_id: v1.id)

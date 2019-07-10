@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Sun, 07 Jul 2019 18:19:06 GMT
+      - Wed, 10 Jul 2019 03:45:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -33,15 +33,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4987'
+      - '4943'
       X-Ratelimit-Reset:
-      - '1562527142'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       Etag:
-      - '"2171932ec75b5d060d91c71c94389d8b"'
+      - '"1a76c0bd59984892eb3ec39dfed28d16"'
       X-Oauth-Scopes:
       - read:user
       X-Accepted-Oauth-Scopes:
@@ -67,12 +67,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - D635:3393:25FDC58:48EB11F:5D22379A
+      - F5C0:1D9F:1295E9:2F2305:5D255F5E
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Sun, 07 Jul 2019 18:19:07 GMT
+  recorded_at: Wed, 10 Jul 2019 03:45:33 GMT
 - request:
     method: get
     uri: https://api.github.com/user/repos
@@ -96,7 +96,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Sun, 07 Jul 2019 18:19:07 GMT
+      - Wed, 10 Jul 2019 03:45:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -106,15 +106,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4986'
+      - '4942'
       X-Ratelimit-Reset:
-      - '1562527142'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       Etag:
-      - '"2171932ec75b5d060d91c71c94389d8b"'
+      - '"1a76c0bd59984892eb3ec39dfed28d16"'
       X-Oauth-Scopes:
       - read:user
       X-Accepted-Oauth-Scopes:
@@ -140,12 +140,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - D636:7C08:274B7A8:499BBAF:5D22379B
+      - F5C1:1F13:169B5C:361019:5D255F5F
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Sun, 07 Jul 2019 18:19:07 GMT
+  recorded_at: Wed, 10 Jul 2019 03:45:33 GMT
 - request:
     method: get
     uri: https://api.github.com/user/followers
@@ -169,7 +169,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Sun, 07 Jul 2019 18:19:07 GMT
+      - Wed, 10 Jul 2019 03:45:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -179,15 +179,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4985'
+      - '4941'
       X-Ratelimit-Reset:
-      - '1562527142'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       Etag:
-      - '"2171932ec75b5d060d91c71c94389d8b"'
+      - '"1a76c0bd59984892eb3ec39dfed28d16"'
       X-Oauth-Scopes:
       - read:user
       X-Accepted-Oauth-Scopes:
@@ -213,12 +213,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - D637:4485:1C85FFA:3BB8084:5D22379B
+      - F5C2:6763:2698C2:524864:5D255F5F
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Sun, 07 Jul 2019 18:19:07 GMT
+  recorded_at: Wed, 10 Jul 2019 03:45:34 GMT
 - request:
     method: get
     uri: https://api.github.com/user/followers
@@ -242,7 +242,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Sun, 07 Jul 2019 18:19:08 GMT
+      - Wed, 10 Jul 2019 03:45:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -252,15 +252,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4984'
+      - '4940'
       X-Ratelimit-Reset:
-      - '1562527142'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       Etag:
-      - '"2171932ec75b5d060d91c71c94389d8b"'
+      - '"1a76c0bd59984892eb3ec39dfed28d16"'
       X-Oauth-Scopes:
       - read:user
       X-Accepted-Oauth-Scopes:
@@ -286,12 +286,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - D638:7938:2802A70:4B1E127:5D22379B
+      - F5C3:3BA6:2598C2:503739:5D255F5F
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Sun, 07 Jul 2019 18:19:08 GMT
+  recorded_at: Wed, 10 Jul 2019 03:45:34 GMT
 - request:
     method: get
     uri: https://api.github.com/user/following
@@ -315,7 +315,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Sun, 07 Jul 2019 18:19:08 GMT
+      - Wed, 10 Jul 2019 03:45:36 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -325,15 +325,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4983'
+      - '4939'
       X-Ratelimit-Reset:
-      - '1562527142'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       Etag:
-      - '"2171932ec75b5d060d91c71c94389d8b"'
+      - '"1a76c0bd59984892eb3ec39dfed28d16"'
       X-Oauth-Scopes:
       - read:user
       X-Accepted-Oauth-Scopes:
@@ -359,12 +359,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - D639:68EE:1EE1A6F:3F36CC1:5D22379C
+      - F5C4:1DA2:330610:5EC598:5D255F60
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Sun, 07 Jul 2019 18:19:08 GMT
+  recorded_at: Wed, 10 Jul 2019 03:45:34 GMT
 - request:
     method: get
     uri: https://api.github.com/user/following
@@ -388,7 +388,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Sun, 07 Jul 2019 18:19:08 GMT
+      - Wed, 10 Jul 2019 03:45:36 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -398,15 +398,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4982'
+      - '4938'
       X-Ratelimit-Reset:
-      - '1562527142'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       Etag:
-      - '"2171932ec75b5d060d91c71c94389d8b"'
+      - '"1a76c0bd59984892eb3ec39dfed28d16"'
       X-Oauth-Scopes:
       - read:user
       X-Accepted-Oauth-Scopes:
@@ -432,10 +432,10 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - D63A:2D3D:264E8FE:48C0133:5D22379C
+      - F5C5:33CF:26E6E9:5164D9:5D255F60
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Sun, 07 Jul 2019 18:19:08 GMT
+  recorded_at: Wed, 10 Jul 2019 03:45:34 GMT
 recorded_with: VCR 4.0.0

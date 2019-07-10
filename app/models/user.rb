@@ -16,11 +16,17 @@ class User < ApplicationRecord
   end
 
   def set_confirmation_token
-    self.confirm_token = SecureRandom.urlsafe_base64.to_s if confirm_token.blank?
+    set_token if confirm_token.blank?
   end
 
   def validate_email
     self.email_confirmed = true
     self.confirm_token = nil
+  end
+
+  private
+
+  def set_token
+    self.confirm_token = SecureRandom.urlsafe_base64.to_s
   end
 end

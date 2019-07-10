@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:43 GMT
+      - Wed, 10 Jul 2019 03:44:18 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -33,9 +33,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4986'
+      - '4968'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -68,12 +68,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F13E:2B72:4F6D8E:76BD6B:5D24BF8F
+      - F456:637B:47F88:6DBAA:5D255F11
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:42 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:16 GMT
 - request:
     method: get
     uri: https://api.github.com/user/repos
@@ -95,7 +95,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:44 GMT
+      - Wed, 10 Jul 2019 03:44:18 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -107,9 +107,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4985'
+      - '4967'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -142,12 +142,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F13F:4E90:2F547B:47285B:5D24BF8F
+      - F457:6375:16274:21A75:5D255F12
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:43 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:16 GMT
 - request:
     method: get
     uri: https://api.github.com/user/followers
@@ -169,7 +169,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:44 GMT
+      - Wed, 10 Jul 2019 03:44:18 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -181,9 +181,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4984'
+      - '4966'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -216,12 +216,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F140:560D:AA714D:1056146:5D24BF90
+      - F458:7D25:BC992:11F267:5D255F12
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:43 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:17 GMT
 - request:
     method: get
     uri: https://api.github.com/user/followers
@@ -243,7 +243,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:45 GMT
+      - Wed, 10 Jul 2019 03:44:19 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -255,9 +255,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4983'
+      - '4965'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -290,12 +290,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F141:4C29:4CD08C:731233:5D24BF90
+      - F459:1BFB:21EF7:32D22:5D255F13
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:44 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:17 GMT
 - request:
     method: get
     uri: https://api.github.com/user/following
@@ -317,7 +317,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:45 GMT
+      - Wed, 10 Jul 2019 03:44:19 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -329,9 +329,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4982'
+      - '4964'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -364,12 +364,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F142:67BE:490B59:6FC7F0:5D24BF91
+      - F45A:5DAE:7053F:A9968:5D255F13
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:44 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:18 GMT
 - request:
     method: get
     uri: https://api.github.com/user/following
@@ -391,7 +391,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:46 GMT
+      - Wed, 10 Jul 2019 03:44:19 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -403,9 +403,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4981'
+      - '4963'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -438,12 +438,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F143:4E90:2F548D:472872:5D24BF92
+      - F45B:7474:B2460:11643E:5D255F13
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:45 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:18 GMT
 - request:
     method: get
     uri: https://api.github.com/users/james-cape
@@ -465,7 +465,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:46 GMT
+      - Wed, 10 Jul 2019 03:44:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -477,9 +477,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4980'
+      - '4962'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -514,13 +514,13 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F144:47D4:B66E54:1190E34:5D24BF92
+      - F45C:4FF4:33EEF:4CD1F:5D255F14
     body:
       encoding: ASCII-8BIT
       string: '{"login":"james-cape","id":46202598,"node_id":"MDQ6VXNlcjQ2MjAyNTk4","avatar_url":"https://avatars2.githubusercontent.com/u/46202598?v=4","gravatar_id":"","url":"https://api.github.com/users/james-cape","html_url":"https://github.com/james-cape","followers_url":"https://api.github.com/users/james-cape/followers","following_url":"https://api.github.com/users/james-cape/following{/other_user}","gists_url":"https://api.github.com/users/james-cape/gists{/gist_id}","starred_url":"https://api.github.com/users/james-cape/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/james-cape/subscriptions","organizations_url":"https://api.github.com/users/james-cape/orgs","repos_url":"https://api.github.com/users/james-cape/repos","events_url":"https://api.github.com/users/james-cape/events{/privacy}","received_events_url":"https://api.github.com/users/james-cape/received_events","type":"User","site_admin":false,"name":"James
         Cape","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"public_repos":44,"public_gists":17,"followers":6,"following":2,"created_at":"2018-12-27T20:54:29Z","updated_at":"2019-07-03T23:37:07Z"}'
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:46 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:18 GMT
 - request:
     method: get
     uri: https://api.github.com/user/repos
@@ -542,7 +542,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:47 GMT
+      - Wed, 10 Jul 2019 03:44:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -554,9 +554,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4979'
+      - '4961'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -589,12 +589,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F145:1C50:9EEBA3:F6B2FE:5D24BF93
+      - F45D:0552:14BE9:1E57E:5D255F14
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:46 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:19 GMT
 - request:
     method: get
     uri: https://api.github.com/user/repos
@@ -616,7 +616,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:47 GMT
+      - Wed, 10 Jul 2019 03:44:21 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -628,9 +628,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4978'
+      - '4960'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -663,12 +663,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F146:67B3:1CD91B:2A3DEB:5D24BF93
+      - F45E:3CAD:A97C2:107F86:5D255F14
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:47 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:19 GMT
 - request:
     method: get
     uri: https://api.github.com/user/followers
@@ -690,7 +690,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:48 GMT
+      - Wed, 10 Jul 2019 03:44:21 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -702,9 +702,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4977'
+      - '4959'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -737,12 +737,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F147:1936:69ABBD:A16EEF:5D24BF94
+      - F45F:128E:15D6B:1FDE1:5D255F15
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:47 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:19 GMT
 - request:
     method: get
     uri: https://api.github.com/user/followers
@@ -764,7 +764,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:48 GMT
+      - Wed, 10 Jul 2019 03:44:21 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -776,9 +776,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4976'
+      - '4958'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -811,12 +811,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F148:026D:290233:3D1C69:5D24BF94
+      - F460:744E:79CB1:B494B:5D255F15
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:48 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:20 GMT
 - request:
     method: get
     uri: https://api.github.com/user/following
@@ -838,7 +838,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:49 GMT
+      - Wed, 10 Jul 2019 03:44:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -850,9 +850,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4975'
+      - '4957'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -885,12 +885,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F149:5112:7189A3:ABABDB:5D24BF95
+      - F461:129C:48A01:6EE18:5D255F16
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:48 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:20 GMT
 - request:
     method: get
     uri: https://api.github.com/user/following
@@ -912,7 +912,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 09 Jul 2019 16:23:50 GMT
+      - Wed, 10 Jul 2019 03:44:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -924,9 +924,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4974'
+      - '4956'
       X-Ratelimit-Reset:
-      - '1562692702'
+      - '1562733845'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -959,10 +959,10 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - F14A:0CEB:C1D686:12939F0:5D24BF96
+      - F462:7471:7A1D4:B7CD4:5D255F16
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 09 Jul 2019 16:23:49 GMT
+  recorded_at: Wed, 10 Jul 2019 03:44:21 GMT
 recorded_with: VCR 4.0.0

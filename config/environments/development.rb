@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.configure do
-  # Verifies that versions and hashed value of the package contents in the project's package.json
+  # Verifies versions/hashed values in the project's package.json
   config.webpacker.check_yarn_integrity = true
-  # Settings specified here will take precedence over those in config/application.rb.
+  # Settings specified here will take precedence over those in application.rb.
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -31,7 +31,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  # Store uploaded files on the local file system (see config/storage.yml for options)
+  # Store uploaded files on the local file system
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.

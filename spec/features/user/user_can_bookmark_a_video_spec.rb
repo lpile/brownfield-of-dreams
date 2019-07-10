@@ -4,11 +4,12 @@ require 'rails_helper'
 
 describe 'A registered user' do
   it 'can add videos to their bookmarks' do
-    tutorial = create(:tutorial, title: 'How to Tie Your Shoes')
-    video = create(:video, title: 'The Bunny Ears Technique', tutorial: tutorial)
+    tutorial = create(:tutorial)
+    video = create(:video, tutorial: tutorial)
     user = create(:user)
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    allow_any_instance_of(ApplicationController).to \
+      receive(:current_user).and_return(user)
 
     visit tutorial_path(tutorial)
 
@@ -24,7 +25,8 @@ describe 'A registered user' do
     video = create(:video, tutorial_id: tutorial.id)
     user = create(:user)
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    allow_any_instance_of(ApplicationController).to \
+      receive(:current_user).and_return(user)
 
     visit tutorial_path(tutorial)
 
@@ -43,7 +45,8 @@ describe 'A registered user' do
     v3 = create(:video, title: 'The Bunny Ears Technique vol3', tutorial: t3)
     user = create(:user)
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    allow_any_instance_of(ApplicationController).to \
+      receive(:current_user).and_return(user)
 
     visit tutorial_path(t1)
     expect do

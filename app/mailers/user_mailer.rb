@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
 
   def registration_confirmation(user)
     @user = user
-    mail(to: user.email, subject: "#{user.first_name} please, confirm your account.")
+    mail(to: user.email, subject: 'Brownfield Account Activation')
   end
 
   def invite_by_email(user, invitee)

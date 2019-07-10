@@ -29,10 +29,11 @@ describe 'vister can create an account', :js do
     click_on'Create Account'
 
     user = User.last
+    expect = 'This account has not yet been activated. Please check your email.'
 
     expect(current_path).to eq(dashboard_path)
     expect(page).to have_content("Logged in as #{user.first_name}")
-    expect(page).to have_content('This account has not yet been activated. Please check your email.')
+    expect(page).to have_content(expect)
     expect(page).to have_content('Status: Inactive')
     expect(page).to have_content(email)
     expect(page).to have_content(first_name)

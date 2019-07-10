@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       user.save(validate: false)
       UserMailer.registration_confirmation(user).deliver_now
       flash[:success] = ["Logged in as #{user.first_name}"]
-      flash[:success] << 'This account has not yet been activated. Please check your email.'
+      flash[:success] << activate_message
       redirect_to dashboard_path
     else
       flash[:error] = 'Username already exists'
@@ -49,7 +49,7 @@ class UsersController < ApplicationController
       UserMailer.invite_by_email(current_user, invitee).deliver_now
       flash[:success] = 'Successfully sent invite!'
     else
-      flash[:error] = "The Github user you selected doesn't have an email address associated with their account."
+      flash[:error] = invalid_email_message1 + invalid_email_message2
     end
     redirect_to dashboard_path
   end
@@ -58,5 +58,17 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
+  end
+
+  def activate_message
+    'This account has not yet been activated. Please check your email.'
+  end
+
+  def invalid_email_message1
+    "The Github user you selected doesn't have "
+  end
+
+  def invalid_email_message2
+    "an email address associated with their account."
   end
 end
