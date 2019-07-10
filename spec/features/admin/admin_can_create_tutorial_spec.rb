@@ -6,7 +6,8 @@ feature 'An Admin can create a new tutorial' do
   let(:admin) { create(:admin) }
 
   scenario 'by clicking on the new tutorial button' do
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+    allow_any_instance_of(ApplicationController).to \
+      receive(:current_user).and_return(admin)
 
     visit admin_dashboard_path
 

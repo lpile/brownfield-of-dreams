@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# User Model
 class User < ApplicationRecord
   has_many :user_videos
   has_many :videos, through: :user_videos
@@ -15,13 +16,17 @@ class User < ApplicationRecord
   end
 
   def set_confirmation_token
-    if confirm_token.blank?
-      self.confirm_token = SecureRandom.urlsafe_base64.to_s
-    end
+    set_token if confirm_token.blank?
   end
 
   def validate_email
     self.email_confirmed = true
     self.confirm_token = nil
+  end
+
+  private
+
+  def set_token
+    self.confirm_token = SecureRandom.urlsafe_base64.to_s
   end
 end

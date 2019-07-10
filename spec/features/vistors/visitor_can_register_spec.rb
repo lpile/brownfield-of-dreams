@@ -8,7 +8,6 @@ describe 'vister can create an account', :js do
     first_name = 'Jim'
     last_name = 'Bob'
     password = 'password'
-    password_confirmation = 'password'
 
     visit '/'
 
@@ -29,10 +28,11 @@ describe 'vister can create an account', :js do
     click_on'Create Account'
 
     user = User.last
+    expect = 'This account has not yet been activated. Please check your email.'
 
     expect(current_path).to eq(dashboard_path)
     expect(page).to have_content("Logged in as #{user.first_name}")
-    expect(page).to have_content('This account has not yet been activated. Please check your email.')
+    expect(page).to have_content(expect)
     expect(page).to have_content('Status: Inactive')
     expect(page).to have_content(email)
     expect(page).to have_content(first_name)
@@ -51,7 +51,6 @@ describe 'vister can create an account', :js do
     first_name = 'Jim'
     last_name = 'Bob'
     password = 'password'
-    password_confirmation = 'password'
 
     visit '/'
 
@@ -66,8 +65,6 @@ describe 'vister can create an account', :js do
     fill_in 'user[password_confirmation]', with: password
 
     click_on'Create Account'
-
-    user = User.last
 
     visit '/khjkjgkjgkjgkj/confirm_email'
 

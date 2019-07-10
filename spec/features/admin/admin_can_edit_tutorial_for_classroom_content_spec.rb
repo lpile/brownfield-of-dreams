@@ -7,7 +7,9 @@ feature 'An Admin can edit a tutorial' do
 
   scenario 'to be classroom content' do
     VCR.use_cassette('admin/can_change_tutorial_classroom_content') do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+      allow_any_instance_of(ApplicationController).to \
+        receive(:current_user).and_return(admin)
+
       tutorial = create(:tutorial)
 
       visit admin_dashboard_path

@@ -8,7 +8,8 @@ feature 'User can see github information in github section' do
 
   scenario 'where five repositories are listed' do
     VCR.use_cassette('user/can_see_five_repositories') do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
+      allow_any_instance_of(ApplicationController).to \
+        receive(:current_user).and_return(user1)
 
       visit dashboard_path
 
@@ -18,7 +19,7 @@ feature 'User can see github information in github section' do
 
       within('.repository-list') do
         expect(page).to have_css('.repository-list-link')
-        expect(page).to have_link('BookClub', href: 'https://github.com/CosmicSpagetti/BookClub')
+        expect(page).to have_content('BookClub')
         expect(page).to have_selector('.repository-list-link', count: 5)
       end
     end
@@ -26,7 +27,8 @@ feature 'User can see github information in github section' do
 
   scenario 'where github followers are listed' do
     VCR.use_cassette('user/can_see_followers') do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
+      allow_any_instance_of(ApplicationController).to \
+        receive(:current_user).and_return(user1)
 
       visit dashboard_path
 
@@ -37,14 +39,15 @@ feature 'User can see github information in github section' do
 
       within('.follower-list') do
         expect(page).to have_css('.follower-list-link')
-        expect(page).to have_link('kylecornelissen', href: 'https://github.com/kylecornelissen')
+        expect(page).to have_link(href: 'https://github.com/kylecornelissen')
       end
     end
   end
 
   scenario 'where github following are listed' do
     VCR.use_cassette('user/can_see_following') do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
+      allow_any_instance_of(ApplicationController).to \
+        receive(:current_user).and_return(user1)
 
       visit dashboard_path
 
@@ -55,14 +58,15 @@ feature 'User can see github information in github section' do
 
       within('.following-list') do
         expect(page).to have_css('.following-list-link')
-        expect(page).to have_link('kylecornelissen', href: 'https://github.com/kylecornelissen')
+        expect(page).to have_link(href: 'https://github.com/kylecornelissen')
       end
     end
   end
 
   context 'edge cases' do
     scenario 'will not show github section if user has no github_token' do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user2)
+      allow_any_instance_of(ApplicationController).to \
+        receive(:current_user).and_return(user2)
 
       visit dashboard_path
 

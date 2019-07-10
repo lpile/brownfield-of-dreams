@@ -1,29 +1,34 @@
 # frozen_string_literal: true
 
+# WelcomeController for landing page
 class WelcomeController < ApplicationController
   def index
-    if current_user
-      classroom_content
-    else
-      visitor_content
-    end
+    @tutorials = if current_user
+                   classroom_content
+                 else
+                   visitor_content
+                 end
   end
 
   private
 
   def classroom_content
     if params[:tag]
-      @tutorials = Tutorial.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 5)
+      Tutorial.tagged_with(params[:tag]).paginate(page_params)
     else
-      @tutorials = Tutorial.all.paginate(page: params[:page], per_page: 5)
+      Tutorial.all.paginate(page_params)
     end
   end
 
   def visitor_content
     if params[:tag]
-      @tutorials = Tutorial.visitor_content.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 5)
+      Tutorial.visitor_content.tagged_with(params[:tag]).paginate(page_params)
     else
-      @tutorials = Tutorial.visitor_content.paginate(page: params[:page], per_page: 5)
+      Tutorial.visitor_content.paginate(page_params)
     end
+  end
+
+  def page_params
+    { page: params[:page], per_page: 5 }
   end
 end
