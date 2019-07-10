@@ -69,6 +69,6 @@ class UsersController < ApplicationController
   end
 
   def invalid_email_message2
-    "an email address associated with their account."
+    'an email address associated with their account.'
   end
 end

@@ -26,20 +26,19 @@ RSpec.describe User, type: :model do
 
   describe 'instance methods' do
     it 'bookmarked_videos' do
-      t1, t2, t3 = create_list(:tutorial, 3)
+      t1, t2 = create_list(:tutorial, 2)
       v1 = create(:video, tutorial: t1)
       v2 = create(:video, tutorial: t2)
-      v3 = create(:video, tutorial: t3)
       user = create(:user)
 
       create(:user_video, user_id: user.id, video_id: v1.id)
-      create(:user_video, user_id: user.id, video_id: v3.id)
+      create(:user_video, user_id: user.id, video_id: v2.id)
 
       results = user.bookmarked_videos
 
       expect(results.count).to eq(2)
       expect(results[0]).to eq(v1)
-      expect(results[1]).to eq(v3)
+      expect(results[1]).to eq(v2)
     end
 
     it 'set_confirmation_token' do

@@ -46,7 +46,7 @@ feature 'User can send invite email via github handle' do
       end
 
       part1 = "The Github user you selected doesn't have "
-      part2 = "an email address associated with their account."
+      part2 = 'an email address associated with their account.'
 
       expect(page).to have_content(part1 + part2)
       expect(current_path).to eq(dashboard_path)

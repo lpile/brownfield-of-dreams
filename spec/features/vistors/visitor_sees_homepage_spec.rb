@@ -4,7 +4,7 @@ require 'rails_helper'
 
 describe 'Visitor' do
   before :each do
-    @tutorial1 = create(:tutorial)
+    @tutorial1 = create(:tutorial, tag_list: ['Ruby'])
     @tutorial2 = create(:tutorial, classroom: true)
 
     @video1, @video2 = create_list(:video, 2, tutorial_id: @tutorial1.id)
@@ -26,16 +26,6 @@ describe 'Visitor' do
     end
 
     it 'can see a list of tagged visitor content tutorials' do
-      mod_3_tutorial_data = {
-        'title' => 'Back End Engineering - Module 3',
-        'description' => 'Video content for Mod 3.',
-        'thumbnail' => 'https://i.ytimg.com/vi/R5FPYQgB6Zc/hqdefault.jpg',
-        'playlist_id' => 'PL1Y67f0xPzdOq2FcpWnawJeyJ3ELUdBkJ',
-        'classroom' => true,
-        'tag_list' => ['Ruby']
-      }
-      m3_tutorial = Tutorial.create! mod_3_tutorial_data
-
       visit root_path
 
       within('.categories') do
@@ -47,8 +37,8 @@ describe 'Visitor' do
       end
 
       expect(current_path).to eq('/tags/Ruby')
-      expect(page).to have_content(mod_3_tutorial_data[:title])
-      expect(page).to have_no_content(@tutorial1.title)
+      expect(page).to have_content(@tutorial1.title)
+      expect(page).to have_no_content(@tutorial2.title)
     end
   end
 

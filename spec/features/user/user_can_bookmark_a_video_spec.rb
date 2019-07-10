@@ -3,15 +3,17 @@
 require 'rails_helper'
 
 describe 'A registered user' do
+  before :each do
+    @tutorial = create(:tutorial)
+    @video1 = create(:video, tutorial_id: @tutorial.id)
+    @user = create(:user)
+  end
+
   it 'can add videos to their bookmarks' do
-    tutorial = create(:tutorial)
-    video = create(:video, tutorial: tutorial)
-    user = create(:user)
-
     allow_any_instance_of(ApplicationController).to \
-      receive(:current_user).and_return(user)
+      receive(:current_user).and_return(@user)
 
-    visit tutorial_path(tutorial)
+    visit tutorial_path(@tutorial)
 
     expect do
       click_on 'Bookmark'
@@ -21,14 +23,10 @@ describe 'A registered user' do
   end
 
   it "can't add the same bookmark more than once" do
-    tutorial = create(:tutorial)
-    video = create(:video, tutorial_id: tutorial.id)
-    user = create(:user)
-
     allow_any_instance_of(ApplicationController).to \
-      receive(:current_user).and_return(user)
+      receive(:current_user).and_return(@user)
 
-    visit tutorial_path(tutorial)
+    visit tutorial_path(@tutorial)
 
     click_on 'Bookmark'
     expect(page).to have_content('Bookmark added to your dashboard')
@@ -49,10 +47,13 @@ describe 'A registered user' do
       receive(:current_user).and_return(user)
 
     visit tutorial_path(t1)
+
     expect do
       click_on 'Bookmark'
     end.to change { UserVideo.count }.by(1)
+
     visit tutorial_path(t3)
+
     expect do
       click_on 'Bookmark'
     end.to change { UserVideo.count }.by(1)
@@ -66,7 +67,6 @@ describe 'A registered user' do
       expect(page).to have_content(v1.tutorial.title)
       expect(page).to have_content(v3.title)
       expect(page).to have_content(v3.tutorial.title)
-
       expect(page).to have_no_content(v2.title)
       expect(page).to have_no_content(v2.tutorial.title)
     end

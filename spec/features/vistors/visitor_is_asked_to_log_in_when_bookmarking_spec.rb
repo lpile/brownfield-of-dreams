@@ -9,6 +9,8 @@ describe 'visitor visits video show page' do
 
     visit tutorial_path(tutorial)
 
+    expect(page).to have_content("#{video.title}")
+
     click_on 'Bookmark'
 
     expect(current_path).to eq(login_path)
