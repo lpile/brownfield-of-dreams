@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# TutorialSequencer orders video's positions
 class TutorialSequencer
   def initialize(tutorial, sequenced_video_ids)
     @tutorial = tutorial

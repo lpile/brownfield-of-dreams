@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# UsersController to create users and user's dashboard
 class UsersController < ApplicationController
   def show
     render locals: {

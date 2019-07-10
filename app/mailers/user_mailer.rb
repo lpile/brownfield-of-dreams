@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# UserMailer sends registration confirmation emails and invitational emails
 class UserMailer < ApplicationMailer
   default from: 'register@brownfield-turing.com'
 

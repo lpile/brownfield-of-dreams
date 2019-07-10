@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
+# Github module
 module Github
+  # FollowerApi poro
   class FollowerApi
     attr_reader :login,
                 :html_url

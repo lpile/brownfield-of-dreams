@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# WelcomeController for landing page
 class WelcomeController < ApplicationController
   def index
     if current_user

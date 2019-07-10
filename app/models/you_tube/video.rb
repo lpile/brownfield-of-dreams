@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
+# Youtube module
 module YouTube
+  # Video poro
   class Video
     attr_reader :thumbnail
 

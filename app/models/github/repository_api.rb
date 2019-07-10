@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
+# Github module
 module Github
+  # RepositoryApi poro
   class RepositoryApi
     attr_reader :name,
                 :html_url

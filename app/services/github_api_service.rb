@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# GithubApiService calls for Github APIs
 class GithubApiService
   def initialize(token)
     @token = token

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# UserVideosController to create bookmarks
 class UserVideosController < ApplicationController
   def new; end
 

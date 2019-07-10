@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# DashboardShowFacade
 class DashboardShowFacade
   attr_reader :bookmarked_videos
 
