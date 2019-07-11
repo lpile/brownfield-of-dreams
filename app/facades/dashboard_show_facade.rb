@@ -22,14 +22,19 @@ class DashboardShowFacade
   end
 
   def followings
-    github_api_service.following_info.map do |result|
-      Github::FollowingApi.new(result)
+    results = github_api_service.following_info
+    results.map do |result|
+      Github::FollowingApi.new(result, get_friends_user_ids(results))
     end
   end
 
   private
 
   attr_reader :github_token
+
+  def get_friends_user_ids(array)
+    @ids ||= User.where(github_id: array.map{|hash| hash[:id]}).pluck(:github_id)
+  end
 
   def github_api_service
     GithubApiService.new(@github_token)
