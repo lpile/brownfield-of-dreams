@@ -5,7 +5,10 @@ class GithubController < ApplicationController
   def new
     auth = request.env['omniauth.auth']
     token = auth['credentials']['token']
-    current_user.update(github_token: token)
+    user_info = GithubApiService.new(token).get_user_info
+    id = user_info[:id]
+    handle = user_info[:login]
+    current_user.update(github_token: token, github_id: id, github_handle: handle)
 
     redirect_to dashboard_path
   end

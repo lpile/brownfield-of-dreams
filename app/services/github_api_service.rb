@@ -22,6 +22,10 @@ class GithubApiService
     get_json("users/#{github_handle}")
   end
 
+  def get_user_info
+    get_json('/user')
+  end
+
   private
 
   def get_json(url)
