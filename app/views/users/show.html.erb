@@ -75,7 +75,11 @@
         <div class="following-list">
           <% facade.followings.each do |following| %>
           <ul>
-            <li class="following-list-link"><%= link_to(following.login, following.html_url) %></li>
+            <li class="following-list-link"><%= link_to(following.login, following.html_url) %>  
+              <% if following.possible_friend %>
+                &mdash; <%= link_to("Add Friend", following.html_url) %>
+              <% end %>
+            </li>
           </ul>
           <% end %>
         </div>
