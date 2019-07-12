@@ -7,8 +7,7 @@ feature 'User can see github information in github section' do
 
   scenario 'where user has zero repositories' do
     VCR.use_cassette('user/has_zero_repositories') do
-      allow_any_instance_of(ApplicationController).to \
-        receive(:current_user).and_return(user)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit dashboard_path
 
@@ -28,8 +27,7 @@ feature 'User can see github information in github section' do
 
   scenario 'where user has zero followers' do
     VCR.use_cassette('user/has_zero_followers') do
-      allow_any_instance_of(ApplicationController).to \
-        receive(:current_user).and_return(user)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit dashboard_path
 
@@ -40,7 +38,7 @@ feature 'User can see github information in github section' do
       within('.follower') do
         expect(page).to have_content("You're not following anyone.")
       end
-      \
+
       within('.follower-list') do
         expect(page).to have_selector('.follower-list-link', count: 0)
       end
@@ -49,8 +47,7 @@ feature 'User can see github information in github section' do
 
   scenario 'where user has zero following' do
     VCR.use_cassette('user/has_zero_following') do
-      allow_any_instance_of(ApplicationController).to \
-        receive(:current_user).and_return(user)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit dashboard_path
 

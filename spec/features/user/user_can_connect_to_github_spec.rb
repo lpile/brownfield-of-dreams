@@ -8,8 +8,7 @@ feature 'User connecting to Github' do
 
   scenario 'user does not have token already trys to connect to Github' do
     VCR.use_cassette('user/can_see_five_repositories') do
-      allow_any_instance_of(ApplicationController).to \
-        receive(:current_user).and_return(user2)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user2)
 
       visit dashboard_path
 
@@ -17,10 +16,7 @@ feature 'User connecting to Github' do
 
       OmniAuth.config.test_mode = true
 
-      OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(
-        :provider => 'github',
-        'credentials' => { 'token' => '123545' }
-      )
+      OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(:provider => 'github', 'credentials' => { 'token' => '123545' })
 
       click_on 'Connect to GitHub'
 
@@ -30,8 +26,7 @@ feature 'User connecting to Github' do
 
   scenario 'user has token and does not see link to connect' do
     VCR.use_cassette('user/can_see_five_repositories') do
-      allow_any_instance_of(ApplicationController).to \
-        receive(:current_user).and_return(user1)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
 
       visit dashboard_path
 
