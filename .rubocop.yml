@@ -12,3 +12,7 @@ Metrics/BlockLength:
     - 'config/routes.rb'
     - 'config/environments/development.rb'
     - 'lib/tasks/youtube_seed.rake'
+
+Metrics/LineLength:
+  Exclude:
+    - 'spec/**/*_spec.rb'

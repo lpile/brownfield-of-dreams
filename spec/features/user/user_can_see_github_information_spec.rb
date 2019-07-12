@@ -27,8 +27,7 @@ feature 'User can see github information in github section' do
 
   scenario 'where github followers are listed' do
     VCR.use_cassette('user/can_see_followers') do
-      allow_any_instance_of(ApplicationController).to \
-        receive(:current_user).and_return(user1)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
 
       visit dashboard_path
 
@@ -46,8 +45,7 @@ feature 'User can see github information in github section' do
 
   scenario 'where github following are listed' do
     VCR.use_cassette('user/can_see_following') do
-      allow_any_instance_of(ApplicationController).to \
-        receive(:current_user).and_return(user1)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
 
       visit dashboard_path
 
@@ -65,8 +63,7 @@ feature 'User can see github information in github section' do
 
   context 'edge cases' do
     scenario 'will not show github section if user has no github_token' do
-      allow_any_instance_of(ApplicationController).to \
-        receive(:current_user).and_return(user2)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user2)
 
       visit dashboard_path
 
