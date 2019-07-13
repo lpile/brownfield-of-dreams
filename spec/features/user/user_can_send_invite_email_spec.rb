@@ -49,7 +49,7 @@ feature 'User can send invite email via github handle' do
     end
   end
 
-  xscenario 'by entering an invalid github handle you get an error message' do
+  scenario 'by entering an invalid github handle you get an error message' do
     VCR.use_cassette('user/cannot_send_invite_with_invalid_github_handle') do
       ActionMailer::Base.deliveries = []
 
@@ -66,7 +66,7 @@ feature 'User can send invite email via github handle' do
         click_on 'Invite Them'
       end
 
-      expect(page).to have_content("The Github user doesn't exist.")
+      expect(page).to have_content("The Github user you selected doesn't have an email address associated with their account.")
       expect(current_path).to eq(dashboard_path)
       expect(ActionMailer::Base.deliveries.count).to eq(0)
     end
