@@ -30,15 +30,17 @@
 
   <% unless current_user.github_token.nil? %>
 
-    <div class='invite'>
-      <%= form_tag '/invite' do %>
-        Enter Your Friend's Github handle: <%= text_field_tag :github_handle %>
-        <%= submit_tag "Invite Them" %>
-      <% end %>
-    </div>
-
     <section class="github">
       <h1>GitHub</h1>
+
+      <section class='invite'>
+        <h3>Invite to Brownfield</h3>
+        <%= form_tag '/invite' do %>
+          Enter Your Friend's Github handle: <%= text_field_tag :github_handle %>
+        <%= submit_tag "Invite Them" %>
+        <% end %>
+      </section>
+
       <section class="repository">
         <h3>Repositories</h3>
         <% if facade.repositories.empty? %>
