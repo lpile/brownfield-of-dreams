@@ -35,7 +35,7 @@ RSpec.describe UserMailer, type: :mailer do
 
     it 'renders email body' do
       expect(mail.body.encoded)
-        .to match("Thanks for registering! To confirm your registration click the URL below.")
+        .to match('Thanks for registering! To confirm your registration click the URL below.')
     end
   end
 end
