@@ -30,12 +30,12 @@ RSpec.describe UserMailer, type: :mailer do
 
     it 'assigns @confirmation_url' do
       expect(mail.body.encoded)
-        .to match("http://localhost:3000/#{user.confirm_token}/confirm_email")
+        .to match("https://brownfield-turing.herokuapp.com/dashboard/#{user.confirm_token}/confirm_email")
     end
 
     it 'renders email body' do
       expect(mail.body.encoded)
-        .to match('Thanks for registering! To confirm your registration click the URL below.')
+        .to match('Thanks for registering! To confirm your registration click')
     end
   end
 end
