@@ -2,17 +2,11 @@
 
 This is the base repo for a brownfield project used at Turing for Backend Mod 3.
 
-Project Spec and Evaluation Rubric: https://github.com/turingschool-examples/brownfield-of-dreams
+This was a brownfield project which means that it was a project that with a partner we needed to add additional features into an exisiting codebase. 
 
 ### Project Board
 
-Students will continue to build on the existing code base using the cards within the following Github Project: https://github.com/turingschool-examples/brownfield-of-dreams/projects/1
-
-**Learning Goals and Labels**
-
-The cards are labeled in a way that correspond to learning goals or to specific areas you might personally want to focus on.
-
-Cards should be completed from top to bottom in the To Do column. Cards labeled `good first issue` are good as filler work and will allow you to practice common Rails skills.
+Github project board was used to manage the user stories and other tasks that were needed to complete this project. 
 
 ### About the Project
 
@@ -22,7 +16,21 @@ A visitor is able to see all of the content on the application but in order to b
 
 ## Local Setup
 
-First you'll need to setup an API key with YouTube and have it defined within `ENV['YOUTUBE_API_KEY']`. There will be one failing spec if you don't have this set up.
+This app uses a few API's to run correctly, you can find the list of needed API keys below which will need to be savedmin an application.yml file within the config directory. 
+```
+/config/application.yml
+# used to pull in videos from Youtube
+YOUTUBE_API_KEY:<key>
+#  Two github tokens used for testing with RSpec
+GITHUB_TOKEN: <key>
+TEST_TOKEN: <key> 
+# Github project OAuth key and Secret for connecting with Omni-Auth
+GITHUB_KEY: <key>
+GITHUB_SECRET: <key>
+# A Sendgrid API as this is used for sending production emails.
+SENDGRID_USERNAME: apikey
+SENDGRID_PASSWORD: <key>
+```
 
 Clone down the repo
 ```
